@@ -80,3 +80,30 @@ button:hover {
   box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
   border: 1px solid rgba(177, 156, 217, 0.2);
 }
+
+/* Estrelinhas */
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  animation: twinkle 1.5s ease-out;
+  z-index: 1;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(var(--x, 0), var(--y, 0)) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Efeito de brilho nos elementos */
+.glow {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
