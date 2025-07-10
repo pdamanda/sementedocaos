@@ -65,3 +65,38 @@ function plantarSemente() {
   resultadoDiv.style.display = "block";
 }
 
+// Função das estrelinhas
+document.addEventListener("mousemove", (e) => {
+  createStar(e.clientX, e.clientY);
+});
+function createStar(x, y) {
+  const star = document.createElement("div");
+  star.classList.add("star");
+
+  // Tamanho aleatório das estrelas
+  const size = Math.random() * 4 + 2;
+  star.style.width = `${size}px`;
+  star.style.height = `${size}px`;
+
+  // Posição das estrelinhas
+  star.style.left = `${x}px`;
+  star.style.top = `${y}px`;
+
+  // Cor das estrelinhas em tons de roxo e branco
+  const colors = ["#ffffff", "#e6e6fa", "#d8bfd8", "#b19cd9"];
+  star.style.backgroundColor =
+    colors[Math.floor(Math.random() * colors.length)];
+
+  // Dá o efeito principal das estrelas (não segue apenas o cursor)
+  const directionX = (Math.random() - 0.5) * 100;
+  const directionY = (Math.random() - 0.5) * 100;
+  star.style.setProperty("--x", `${directionX}px`);
+  star.style.setProperty("--y", `${directionY}px`);
+
+  document.body.appendChild(star);
+
+  // Remove a estrela pra não ficar pra sempre
+  setTimeout(() => {
+    star.remove();
+  }, 1500);
+}
