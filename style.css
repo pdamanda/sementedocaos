@@ -1,0 +1,65 @@
+body {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d1a5c 100%);
+  color: #ffffff;
+  font-family: "Georgia", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  color: #b19cd9;
+  text-shadow: 0 0 10px rgba(177, 156, 217, 0.7);
+  margin-bottom: 30px;
+}
+
+.container {
+  background: rgba(25, 25, 50, 0.7);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(111, 0, 255, 0.4);
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(177, 156, 217, 0.3);
+}
+
+textarea,
+select,
+button {
+  margin-top: 15px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: none;
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  width: 350px;
+  background: rgba(25, 20, 45, 0.9);
+  color: white;
+  box-shadow: 0 0 15px rgba(111, 0, 255, 0.3);
+}
+
+textarea {
+  min-height: 120px;
+  font-family: "Georgia", serif;
+  resize: vertical;
+}
+
+textarea:focus,
+select:focus {
+  outline: 2px solid #b19cd9;
+}
+
+button {
+  background: linear-gradient(to right, #8a2be2, #6a5acd);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
