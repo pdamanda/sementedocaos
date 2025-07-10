@@ -8,19 +8,22 @@
   </head>
   <body>
     <h1>Semente do Caos 🌱</h1>
-    <p>
+    <p class="descricao">
       Cada pequena ação que você executa é uma semente lançada no tecido do
       universo. Um gesto, um pensamento, um silêncio — tudo se move e responde.
       Aqui, você cultiva o caos sutil: não o que explode por fora, mas o que
       ecoa por dentro. Plante sua semente e receba o reflexo de si mesma, em
       forma de percepção, memória ou sombra esquecida.
     </p>
-    <label>Descreva seu ato mágico:</label><br />
+    <label for="acao">Descreva seu ato mágico:</label><br />
     <textarea
+      id="acao"
       rows="3"
       placeholder="Ex: Enterrei uma colher de prata na lua cheia..."
     ></textarea
     ><br />
     <button onclick="plantarSemente()">Plantar a Semente</button>
+    <div id="resultado" class="resultado" style="display: none"></div>
+    <script src="script.js"></script>
   </body>
 </html>
